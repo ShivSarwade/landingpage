@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        nav{
+            height: 8vh;
+            width: 100vw;
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid black;
+            position: fixed;
+            top: 0px;
+        }
+        a{
+            text-decoration: none;
+            color : black;
+        }
+        nav > h2{
+            color: rgb(164, 53, 240);
+            font-size: 2vw;
+            padding-left: 3vw;
+        }
+
+        a:visited{
+            color:black;
+        }
+        li{
+            padding: 0.3vw 0.6vw;
+        }
+        
+        ul{
+            text-transform: capitalize;
+            list-style-type: none;
+            display: flex;
+            gap: 2vw;
+            font-size: 1.4vw;
+            align-items: center;
+        }
+        .btn{
+
+            text-transform: capitalize;
+            font-size: 1vw;
+            color: white;
+            padding: 0.6vw;
+            border-radius: 6px;
+            border: 2px solid transparent;
+            background-color: rgb(164, 53, 240);
+            cursor: pointer;
+        }
+        .hero{
+            display: flex;
+            width: 100vw;
+            height: calc(100vh - 8vh);
+            padding-top: 4vw ;
+        }
+        .right{
+            width: 45%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .right > img{
+            width: 100%;
+            padding-right: 4vw ;
+        }
+        .left{
+            width: 55%;
+            height: 100%;
+            padding: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .left > h1{
+            font-size: 5vw;
+        }
+        .left > h1 > span{
+            color: rgb(164, 53, 240);
+        }
+
+        .left > p{
+            padding: 2vw 2vw 2vw 0;
+            font-size: 1.2vw;
+        }
+
+        .left > .btn{
+            font-size: 1.2vw;
+            align-self: flex-start;
+            padding: 2vh 3vh;
+        }
+
+        @media (max-width:600px){
+            .hero{
+                padding-top:8vh;
+                flex-direction: column;
+            }
+            .left , .right{
+                width: 100%;
+                
+            }
+            .left > h1{
+                font-size: 6vh;
+            }
+            .left > p{
+                padding-left:3px;
+                font-size: 1.6vh;
+            }
+            .left{
+                height: 55%;
+                padding: 4vh;
+            }
+            .right{
+                height: 45%;
+            }
+            .right > img {
+                transform: scale(76%);
+            }
+            .left >.btn{
+                font-size: 2vh;
+                padding: 1.5vh 2vh;
+            }
+            .btn{
+                font-size: 1.8vh;
+                padding: 1vh 2vh;
+            }
+            nav > h2{
+                font-size: 3vh;
+                padding-left: 1.2vh;
+            }
+            nav > ul  >li > a{
+                display: none;
+            }
+            
+
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="main">
+    <header>
+        <nav>
+            <h2>CODIANS</h2>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">courses</a></li>
+                <li><input type="button" class="btn" value="sign in"></li>
+            </ul>
+        </nav>
+    </header>
+    
+        <div class="hero">
+            <div class="left">
+                <h1>Learn from the <span>smartest</span> platform in India</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit qui ut asperiores ratione fugit ea, neque aliquid vitae vero deserunt ipsa magnam fugiat, excepturi voluptatum molestias minima quod molestiae voluptates.</p>
+                <button class="btn" value="explore">explore</button>
+            </div>
+            <div class="right">
+                <img src="CODING.png" alt="coding bro image">
+            </div>
+        </div>
+   
+
+   </div> 
+</body>
+</html>
